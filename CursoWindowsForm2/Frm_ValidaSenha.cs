@@ -119,6 +119,7 @@ namespace CursoWindowsForm2
             ChecaForcaSenha.ForcaDaSenha forca;
             forca = verifica.GetForcaDaSenha(Txt_Senha.Text);
                 Lbl_Resultado.Text = forca.ToString();
+            //eu amo windows forms
         }
     }
 }
