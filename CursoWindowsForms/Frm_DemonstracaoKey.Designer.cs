@@ -1,4 +1,4 @@
-﻿namespace CursoWindowsForm2
+﻿namespace CursoWindowsForms
 {
     partial class Frm_DemonstracaoKey
     {
@@ -67,18 +67,19 @@
             // 
             // Lbl_Minus
             // 
+            this.Lbl_Minus.AutoSize = true;
             this.Lbl_Minus.Location = new System.Drawing.Point(320, 104);
             this.Lbl_Minus.Name = "Lbl_Minus";
-            this.Lbl_Minus.Size = new System.Drawing.Size(40, 16);
+            this.Lbl_Minus.Size = new System.Drawing.Size(38, 13);
             this.Lbl_Minus.TabIndex = 3;
             this.Lbl_Minus.Text = "Minus.";
-            this.Lbl_Minus.Click += new System.EventHandler(this.label1_Click);
             // 
             // Lbl_Maius
             // 
+            this.Lbl_Maius.AutoSize = true;
             this.Lbl_Maius.Location = new System.Drawing.Point(320, 56);
             this.Lbl_Maius.Name = "Lbl_Maius";
-            this.Lbl_Maius.Size = new System.Drawing.Size(40, 16);
+            this.Lbl_Maius.Size = new System.Drawing.Size(38, 13);
             this.Lbl_Maius.TabIndex = 4;
             this.Lbl_Maius.Text = "Maius.";
             // 
@@ -113,7 +114,6 @@
             this.Name = "Frm_DemonstracaoKey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstração Evento Key";
-            this.Load += new System.EventHandler(this.Frm_DemonstracaoKey_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

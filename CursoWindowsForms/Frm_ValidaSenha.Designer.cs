@@ -1,4 +1,4 @@
-﻿namespace CursoWindowsForm2
+﻿namespace CursoWindowsForms
 {
     partial class Frm_ValidaSenha
     {
@@ -58,7 +58,7 @@
             this.Btn_Reset.Name = "Btn_Reset";
             this.Btn_Reset.Size = new System.Drawing.Size(111, 23);
             this.Btn_Reset.TabIndex = 2;
-            this.Btn_Reset.Text = "Limpar";
+            this.Btn_Reset.Text = "Limpa";
             this.Btn_Reset.UseVisualStyleBackColor = true;
             this.Btn_Reset.Click += new System.EventHandler(this.Btn_Reset_Click);
             // 
@@ -84,7 +84,6 @@
             this.Name = "Frm_ValidaSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validação de Senha";
-            this.Load += new System.EventHandler(this.Frm_ValidaSenha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

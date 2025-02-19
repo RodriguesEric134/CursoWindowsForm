@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CursoWindowsForm2
+namespace CursoWindowsForms
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
@@ -16,7 +16,7 @@ namespace CursoWindowsForm2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_ValidaSenha());
+            Application.Run(new Frm_ValidaCPF());
         }
     }
 }

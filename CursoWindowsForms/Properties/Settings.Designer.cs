@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CursoWindowsForm2.Properties
+namespace CursoWindowsForms.Properties
 {
 
 

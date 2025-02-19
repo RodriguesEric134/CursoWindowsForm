@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CursoWindowsForm2
+namespace CursoWindowsForms
 {
     public partial class Frm_DemonstracaoKey : Form
     {
@@ -17,26 +17,11 @@ namespace CursoWindowsForm2
             InitializeComponent();
         }
 
-        private void Lbl_maius_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Frm_DemonstracaoKey_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Txt_Input_KeyDown(object sender, KeyEventArgs e)
         {
-            Txt_Msg.AppendText("\r\n" + "Pressionei a tecla: " +e.KeyCode+"\r\n");
-            Txt_Msg.AppendText("\t" + "Código da tecla : " + ((int)e.KeyCode) + "\r\n");
-            Txt_Msg.AppendText("\r\n" + "Nome da tecla: " + e.KeyData + "\r\n");
+            Txt_Msg.AppendText("\r\n" + "Pressionei uma tecla: " + e.KeyCode + "\r\n");
+            Txt_Msg.AppendText("\t" + "Código da tecla: " + ((int)e.KeyCode) + "\r\n");
+            Txt_Msg.AppendText("\t" + "Nome da tecla: " + e.KeyData + "\r\n");
             Lbl_Lower.Text = e.KeyCode.ToString().ToLower();
             Lbl_Upper.Text = e.KeyCode.ToString().ToUpper();
         }
@@ -48,7 +33,6 @@ namespace CursoWindowsForm2
             Lbl_Upper.Text = "";
             Lbl_Lower.Text = "";
 
-           
         }
     }
 }
