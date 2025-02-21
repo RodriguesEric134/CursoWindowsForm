@@ -45,6 +45,8 @@
             // 
             // Lbl_Resultado
             // 
+            this.Lbl_Resultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Lbl_Resultado.AutoSize = true;
             this.Lbl_Resultado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Resultado.Location = new System.Drawing.Point(12, 90);
@@ -54,6 +56,7 @@
             // 
             // Btn_Reset
             // 
+            this.Btn_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Reset.Location = new System.Drawing.Point(245, 74);
             this.Btn_Reset.Name = "Btn_Reset";
             this.Btn_Reset.Size = new System.Drawing.Size(111, 23);
@@ -64,6 +67,7 @@
             // 
             // Btn_Valida
             // 
+            this.Btn_Valida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Valida.Location = new System.Drawing.Point(245, 45);
             this.Btn_Valida.Name = "Btn_Valida";
             this.Btn_Valida.Size = new System.Drawing.Size(111, 23);
@@ -84,7 +88,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_ValidaCPF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Valida CPF";
+            this.Text = "Valida CPF 1";
             this.Load += new System.EventHandler(this.Frm_ValidaCPF_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
