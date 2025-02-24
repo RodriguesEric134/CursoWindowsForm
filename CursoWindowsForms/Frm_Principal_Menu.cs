@@ -32,7 +32,7 @@ namespace CursoWindowsForms
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_HelloWorld f = new Frm_HelloWorld();
-            f.ShowDialog();
+            f.ShowDialog();           
         }
 
         private void mascaraToolStripMenuItem_Click(object sender, EventArgs e)
