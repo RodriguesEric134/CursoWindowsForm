@@ -16,46 +16,47 @@ namespace CursoWindowsForms
         {
             InitializeComponent();
         }
+
+        private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaCPF f = new Frm_ValidaCPF();
+            f.MdiParent = this;
+            f.Show();
+        }
+
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_DemonstracaoKey DK = new Frm_DemonstracaoKey();
-            DK.MdiParent = this;
-            DK.Show();
+            Frm_DemonstracaoKey f = new Frm_DemonstracaoKey();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_HelloWorld HW = new Frm_HelloWorld();
-            HW.MdiParent = this;
-            HW.Show();
+            Frm_HelloWorld f = new Frm_HelloWorld();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void mascaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Mascara MCR = new Frm_Mascara();
-            MCR.MdiParent = this;
-            MCR.Show();
+            Frm_Mascara f = new Frm_Mascara();
+            f.MdiParent = this;
+            f.Show();
         }
 
-        private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
+        private void valídaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ValidaCPF CPF = new Frm_ValidaCPF();
-            CPF.MdiParent = this;
-            CPF.Show();
+            Frm_ValidaCPF2 f = new Frm_ValidaCPF2();
+            f.MdiParent = this;
+            f.Show();
         }
 
-        private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void valídaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ValidaCPF2 CPF2 = new Frm_ValidaCPF2();
-            CPF2.MdiParent = this;
-            CPF2.Show();
-        }
-
-        private void validaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_ValidaSenha SNH = new Frm_ValidaSenha();
-            SNH.MdiParent = this;
-            SNH.Show();
+            Frm_ValidaSenha f = new Frm_ValidaSenha();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,17 +66,17 @@ namespace CursoWindowsForms
 
         private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.Cascade);
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
         }
 
         private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.TileHorizontal);
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
         }
 
         private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.LayoutMdi(MdiLayout.TileVertical);
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical);
         }
     }
 }

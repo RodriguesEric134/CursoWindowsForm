@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66A08141-FBE7-4FBD-AE05-7008EC510346}</ProjectGuid>
+    <ProjectGuid>{D619DEB3-F971-4C2D-97A3-F62E9D5681AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CursoWindowsFormsBiblioteca</RootNamespace>

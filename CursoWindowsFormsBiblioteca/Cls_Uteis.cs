@@ -128,5 +128,6 @@ namespace CursoWindowsFormsBiblioteca
                     return ForcaDaSenha.Segura;
             }
         }
+
     }
 }
