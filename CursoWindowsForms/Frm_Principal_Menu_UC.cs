@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CursoWindowsForms.Dialog_Box;
+using CursoWindowsForms.ExemplosDIalogBox;
+using CursoWindowsFormsBiblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,10 +22,18 @@ namespace CursoWindowsForms
         int ControleValidaCPF = 0;
         int ControleValidaSenha = 0;
         int ControleValidaCPF2 = 0;
+        int ControleArquivoImagem = 0;
 
         public Frm_Principal_Menu_UC()
         {
             InitializeComponent();
+
+            novoToolStripMenuItem.Enabled = false;
+            apagarAbaToolStripMenuItem.Enabled = false;
+            abrirImagemToolStripMenuItem.Enabled = false;
+            fazerLoginToolStripMenuItem.Enabled = true;
+            desconectarToolStripMenuItem.Enabled = false;
+
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +125,85 @@ namespace CursoWindowsForms
             {
                 Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
             }
+        }
+
+        private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            OpenFileDialog DB = new OpenFileDialog();
+            DB.InitialDirectory = "C:\\Users\\conap\\OneDrive\\Documentos\\Estudo-Eric\\CursoWindowsForms\\ArquivosWindosForms\\Arquivos-Modulo-6";
+            DB.Filter = "PNG| * PNG";
+            DB.Title = "Escolha a Imagem";
+
+            if(DB.ShowDialog()== DialogResult.OK)
+            {
+
+                string nomeArquivoImagem = DB.FileName;
+
+
+                ControleArquivoImagem += 1;
+                Frm_ArquivoImagem_UC U = new Frm_ArquivoImagem_UC(nomeArquivoImagem);
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new TabPage();
+                TB.Name = "Arquivo Imagem " + ControleArquivoImagem;
+                TB.Text = "Arquivo Imagem " + ControleArquivoImagem;
+                TB.ImageIndex = 6;
+                TB.Controls.Add(U);
+                Tbc_Aplicacoes.TabPages.Add(TB);
+            }            
+        }
+
+        private void fazerLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Login Lgn = new Frm_Login();
+            Lgn.ShowDialog();
+
+            if(Lgn.DialogResult == DialogResult.OK)
+            {
+
+                string senha = Lgn.senha;
+                string usuario = Lgn.login;
+
+                if (CursoWindowsFormsBiblioteca.Cls_Uteis.validaSenhaLogin(senha) == true)
+                {
+                    novoToolStripMenuItem.Enabled = true;
+                    apagarAbaToolStripMenuItem.Enabled = true;
+                    abrirImagemToolStripMenuItem.Enabled = true;
+                    fazerLoginToolStripMenuItem.Enabled = false;
+                    desconectarToolStripMenuItem.Enabled = true;
+
+                    MessageBox.Show($"Bem vindo, {usuario} !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Erro! Senha inválida", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+            }
+        }
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Questao DB = new Frm_Questao("icons8_question_100", "Quer mesmo se Desconectar?");
+            DB.ShowDialog();
+            //if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+            if (DB.DialogResult == DialogResult.Yes)
+            {
+
+                //Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+                for(int i = Tbc_Aplicacoes.TabPages.Count - 1; i >= 0; i+= -1)
+                {
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+                }
+
+
+                novoToolStripMenuItem.Enabled = false;
+                apagarAbaToolStripMenuItem.Enabled = false;
+                abrirImagemToolStripMenuItem.Enabled = false;
+                desconectarToolStripMenuItem.Enabled = false;
+                fazerLoginToolStripMenuItem.Enabled = true;
+            }            
         }
     }
 }

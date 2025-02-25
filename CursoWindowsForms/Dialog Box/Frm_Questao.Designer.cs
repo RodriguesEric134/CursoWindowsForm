@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Questao));
             this.Lbl_Questao = new System.Windows.Forms.Label();
-            this.Btn_OK = new System.Windows.Forms.Button();
+            this.Btn_YES = new System.Windows.Forms.Button();
             this.Btn_Cancel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Pic_Imagem = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Imagem)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_Questao
@@ -47,15 +47,15 @@
             this.Lbl_Questao.Text = "Você deseja validar o CPF?";
             this.Lbl_Questao.Click += new System.EventHandler(this.Lbl_Questao_Click);
             // 
-            // Btn_OK
+            // Btn_YES
             // 
-            this.Btn_OK.Location = new System.Drawing.Point(147, 60);
-            this.Btn_OK.Name = "Btn_OK";
-            this.Btn_OK.Size = new System.Drawing.Size(115, 23);
-            this.Btn_OK.TabIndex = 1;
-            this.Btn_OK.Text = "SIM QUERO";
-            this.Btn_OK.UseVisualStyleBackColor = true;
-            this.Btn_OK.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_YES.Location = new System.Drawing.Point(147, 60);
+            this.Btn_YES.Name = "Btn_YES";
+            this.Btn_YES.Size = new System.Drawing.Size(115, 23);
+            this.Btn_YES.TabIndex = 1;
+            this.Btn_YES.Text = "SIM QUERO";
+            this.Btn_YES.UseVisualStyleBackColor = true;
+            this.Btn_YES.Click += new System.EventHandler(this.button1_Click);
             // 
             // Btn_Cancel
             // 
@@ -67,25 +67,25 @@
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
-            // pictureBox1
+            // Pic_Imagem
             // 
-            this.pictureBox1.Image = global::CursoWindowsForms.Properties.Resources.icons8_question_100;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.Pic_Imagem.Image = global::CursoWindowsForms.Properties.Resources.icons8_question_100;
+            this.Pic_Imagem.Location = new System.Drawing.Point(22, 39);
+            this.Pic_Imagem.Name = "Pic_Imagem";
+            this.Pic_Imagem.Size = new System.Drawing.Size(100, 100);
+            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Pic_Imagem.TabIndex = 3;
+            this.Pic_Imagem.TabStop = false;
+            this.Pic_Imagem.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Questao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 151);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Pic_Imagem);
             this.Controls.Add(this.Btn_Cancel);
-            this.Controls.Add(this.Btn_OK);
+            this.Controls.Add(this.Btn_YES);
             this.Controls.Add(this.Lbl_Questao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -95,7 +95,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questão";
             this.Load += new System.EventHandler(this.Frm_Questao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Imagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,8 +104,8 @@
         #endregion
 
         private System.Windows.Forms.Label Lbl_Questao;
-        private System.Windows.Forms.Button Btn_OK;
+        private System.Windows.Forms.Button Btn_YES;
         private System.Windows.Forms.Button Btn_Cancel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Pic_Imagem;
     }
 }
