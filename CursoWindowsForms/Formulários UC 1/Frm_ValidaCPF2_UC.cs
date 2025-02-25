@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca;
-
+using CursoWindowsForms.Dialog_Box;
 
 namespace CursoWindowsForms
 {
@@ -42,7 +42,12 @@ namespace CursoWindowsForms
                 }
                 else
                 {
-                    if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                    Frm_Questao DB = new Frm_Questao();
+                    DB.ShowDialog();
+                    //if (MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+
+                    if (DB.DialogResult == DialogResult.Yes)
                     {
                         bool validaCPF = false;
                         validaCPF = Cls_Uteis.Valida(Msk_CPF.Text);

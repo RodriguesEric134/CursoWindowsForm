@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Questao));
             this.Lbl_Questao = new System.Windows.Forms.Label();
             this.Btn_OK = new System.Windows.Forms.Button();
             this.Btn_Cancel = new System.Windows.Forms.Button();
@@ -41,9 +42,10 @@
             this.Lbl_Questao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Questao.Location = new System.Drawing.Point(18, 9);
             this.Lbl_Questao.Name = "Lbl_Questao";
-            this.Lbl_Questao.Size = new System.Drawing.Size(244, 20);
+            this.Lbl_Questao.Size = new System.Drawing.Size(229, 20);
             this.Lbl_Questao.TabIndex = 0;
-            this.Lbl_Questao.Text = "Você deseja validar a senha?";
+            this.Lbl_Questao.Text = "Você deseja validar o CPF?";
+            this.Lbl_Questao.Click += new System.EventHandler(this.Lbl_Questao_Click);
             // 
             // Btn_OK
             // 
@@ -63,14 +65,18 @@
             this.Btn_Cancel.TabIndex = 2;
             this.Btn_Cancel.Text = "NÃO QUERO";
             this.Btn_Cancel.UseVisualStyleBackColor = true;
+            this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 42);
+            this.pictureBox1.Image = global::CursoWindowsForms.Properties.Resources.icons8_question_100;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Questao
             // 
@@ -82,11 +88,13 @@
             this.Controls.Add(this.Btn_OK);
             this.Controls.Add(this.Lbl_Questao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Frm_Questao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questão";
+            this.Load += new System.EventHandler(this.Frm_Questao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

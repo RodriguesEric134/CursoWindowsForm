@@ -19,6 +19,28 @@ namespace CursoWindowsForms.Dialog_Box
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Yes;
+            this.Close();
+        }
+
+        private void Lbl_Questao_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Btn_Cancel_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Frm_Questao_Load(object sender, EventArgs e)
+        {
 
         }
     }
