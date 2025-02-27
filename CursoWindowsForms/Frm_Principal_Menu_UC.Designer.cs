@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal_Menu_UC));
             this.Mnu_Principal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fazerLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demonstraçãoKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helloWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +41,13 @@
             this.valídaCPF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.valídaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.açõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirImagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tbc_Aplicacoes = new System.Windows.Forms.TabControl();
             this.Iml_Imagens = new System.Windows.Forms.ImageList(this.components);
-            this.fazerLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.desconectarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Mnu_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,13 @@
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
+            // fazerLoginToolStripMenuItem
+            // 
+            this.fazerLoginToolStripMenuItem.Name = "fazerLoginToolStripMenuItem";
+            this.fazerLoginToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.fazerLoginToolStripMenuItem.Text = "Fazer Login";
+            this.fazerLoginToolStripMenuItem.Click += new System.EventHandler(this.fazerLoginToolStripMenuItem_Click);
+            // 
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -85,7 +92,7 @@
             this.valídaCPF2ToolStripMenuItem,
             this.valídaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -145,14 +152,21 @@
             // apagarAbaToolStripMenuItem
             // 
             this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
             this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            // 
+            // desconectarToolStripMenuItem
+            // 
+            this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.desconectarToolStripMenuItem.Text = "Desconectar";
+            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -186,6 +200,7 @@
             this.Tbc_Aplicacoes.SelectedIndex = 0;
             this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 426);
             this.Tbc_Aplicacoes.TabIndex = 1;
+            this.Tbc_Aplicacoes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseDown);
             // 
             // Iml_Imagens
             // 
@@ -198,20 +213,6 @@
             this.Iml_Imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.Iml_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             this.Iml_Imagens.Images.SetKeyName(6, "3643772-archive-archives-document-folder-open_113445.png");
-            // 
-            // fazerLoginToolStripMenuItem
-            // 
-            this.fazerLoginToolStripMenuItem.Name = "fazerLoginToolStripMenuItem";
-            this.fazerLoginToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fazerLoginToolStripMenuItem.Text = "Fazer Login";
-            this.fazerLoginToolStripMenuItem.Click += new System.EventHandler(this.fazerLoginToolStripMenuItem_Click);
-            // 
-            // desconectarToolStripMenuItem
-            // 
-            this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.desconectarToolStripMenuItem.Text = "Desconectar";
-            this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
             // Frm_Principal_Menu_UC
             // 

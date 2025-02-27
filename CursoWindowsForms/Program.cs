@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursoWindowsForms.Formulários_Mouse;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace CursoWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_MouseCaptura());
+            Application.Run(new Frm_Principal_Menu_UC());
         }
     }
 }
