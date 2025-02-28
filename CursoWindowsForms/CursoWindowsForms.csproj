@@ -94,34 +94,34 @@
     <Compile Include="Formulários Mouse\Frm_MouseCursor.Designer.cs">
       <DependentUpon>Frm_MouseCursor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_Mascara_UC.cs">
+    <Compile Include="Formulários UC\Frm_Mascara_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_Mascara_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_Mascara_UC.Designer.cs">
       <DependentUpon>Frm_Mascara_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaCPF_UC.cs">
+    <Compile Include="Formulários UC\Frm_ValidaCPF_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaCPF_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_ValidaCPF_UC.Designer.cs">
       <DependentUpon>Frm_ValidaCPF_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaCPF2_UC.cs">
+    <Compile Include="Formulários UC\Frm_ValidaCPF2_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaCPF2_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_ValidaCPF2_UC.Designer.cs">
       <DependentUpon>Frm_ValidaCPF2_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_DemostracaoKey_UC.cs">
+    <Compile Include="Formulários UC\Frm_DemostracaoKey_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_DemostracaoKey_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_DemostracaoKey_UC.Designer.cs">
       <DependentUpon>Frm_DemostracaoKey_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_HelloWorld_UC.cs">
+    <Compile Include="Formulários UC\Frm_HelloWorld_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_HelloWorld_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_HelloWorld_UC.Designer.cs">
       <DependentUpon>Frm_HelloWorld_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Formulários Mouse\Frm_MouseCaptura.cs">
@@ -135,6 +135,12 @@
     </Compile>
     <Compile Include="Formulários Mouse\Frm_MouseEventos.Designer.cs">
       <DependentUpon>Frm_MouseEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários UC\Frm_CadastroCliente_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Formulários UC\Frm_CadastroCliente_UC.Designer.cs">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Menu_Flutuante.cs">
       <SubType>Form</SubType>
@@ -184,10 +190,10 @@
     <Compile Include="Frm_Principal_Menu_UC.Designer.cs">
       <DependentUpon>Frm_Principal_Menu_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaSenha_UC.cs">
+    <Compile Include="Formulários UC\Frm_ValidaSenha_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Formulários UC 1\Frm_ValidaSenha_UC.Designer.cs">
+    <Compile Include="Formulários UC\Frm_ValidaSenha_UC.Designer.cs">
       <DependentUpon>Frm_ValidaSenha_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -213,13 +219,13 @@
     <EmbeddedResource Include="Formulários Mouse\Frm_MouseCursor.resx">
       <DependentUpon>Frm_MouseCursor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_DemostracaoKey_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_DemostracaoKey_UC.resx">
       <DependentUpon>Frm_DemostracaoKey_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_HelloWorld_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_HelloWorld_UC.resx">
       <DependentUpon>Frm_HelloWorld_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_Mascara_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_Mascara_UC.resx">
       <DependentUpon>Frm_Mascara_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários Mouse\Frm_MouseCaptura.resx">
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários Mouse\Frm_MouseEventos.resx">
       <DependentUpon>Frm_MouseEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários UC\Frm_CadastroCliente_UC.resx">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Menu_Flutuante.resx">
       <DependentUpon>Frm_Menu_Flutuante.cs</DependentUpon>
@@ -252,13 +261,13 @@
     <EmbeddedResource Include="Frm_Principal_Menu_UC.resx">
       <DependentUpon>Frm_Principal_Menu_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_ValidaCPF_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_ValidaCPF_UC.resx">
       <DependentUpon>Frm_ValidaCPF_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_ValidaCPF2_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_ValidaCPF2_UC.resx">
       <DependentUpon>Frm_ValidaCPF2_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formulários UC 1\Frm_ValidaSenha_UC.resx">
+    <EmbeddedResource Include="Formulários UC\Frm_ValidaSenha_UC.resx">
       <DependentUpon>Frm_ValidaSenha_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -285,6 +294,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagens\Cadastros.png" />
     <Content Include="Imagens\DeleteAll.png" />
     <Content Include="Imagens\DeleteLeft.png" />
     <Content Include="Imagens\DeleteRight.png" />
@@ -305,6 +315,8 @@
     <Content Include="Imagens\icons8-question-100.ico" />
     <Content Include="Imagens\icons8-question-100.png" />
     <Content Include="Imagens\key.png" />
+    <Content Include="Imagens\money.png" />
+    <Content Include="Imagens\user.png" />
     <None Include="IMG\DeleteRight.png" />
     <None Include="IMG\DeleteLeft.png" />
     <None Include="IMG\DeleteAll.png" />

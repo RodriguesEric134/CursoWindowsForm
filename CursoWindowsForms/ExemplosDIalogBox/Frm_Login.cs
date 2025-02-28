@@ -18,6 +18,7 @@ namespace CursoWindowsForms.ExemplosDIalogBox
         public Frm_Login()
         {
             InitializeComponent();
+            this.AcceptButton = Btn_OK;
         }
 
         private void Btn_OK_Click(object sender, EventArgs e)
