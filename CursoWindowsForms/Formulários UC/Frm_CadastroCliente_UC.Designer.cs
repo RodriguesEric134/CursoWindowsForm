@@ -42,11 +42,8 @@
             this.Lbl_Logradouro = new System.Windows.Forms.Label();
             this.Txt_CEP = new System.Windows.Forms.TextBox();
             this.Lbl_CEP = new System.Windows.Forms.Label();
-            this.Txt_Genero = new System.Windows.Forms.TextBox();
-            this.Lbl_Genero = new System.Windows.Forms.Label();
             this.Txt_Bairro = new System.Windows.Forms.TextBox();
             this.Lbl_Bairro = new System.Windows.Forms.Label();
-            this.Txt_Estado = new System.Windows.Forms.TextBox();
             this.Lbl_Estado = new System.Windows.Forms.Label();
             this.Txt_RendaFamiliar = new System.Windows.Forms.TextBox();
             this.Lbl_RendaFamiliar = new System.Windows.Forms.Label();
@@ -57,14 +54,20 @@
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Grb_Codigo = new System.Windows.Forms.GroupBox();
             this.Grb_DadosPessoais = new System.Windows.Forms.GroupBox();
+            this.Grb_Genero = new System.Windows.Forms.GroupBox();
+            this.Rb_Outro = new System.Windows.Forms.RadioButton();
+            this.Rb_Feminino = new System.Windows.Forms.RadioButton();
+            this.Rb_Masculino = new System.Windows.Forms.RadioButton();
             this.Grb_TemPai = new System.Windows.Forms.GroupBox();
             this.Chk_TemPai = new System.Windows.Forms.CheckBox();
             this.Grb_Endereco = new System.Windows.Forms.GroupBox();
+            this.Cb_Estados = new System.Windows.Forms.ComboBox();
             this.Lbl_Cidade = new System.Windows.Forms.Label();
             this.Txb_Cidade = new System.Windows.Forms.TextBox();
             this.Grb_Outros = new System.Windows.Forms.GroupBox();
             this.Grb_Codigo.SuspendLayout();
             this.Grb_DadosPessoais.SuspendLayout();
+            this.Grb_Genero.SuspendLayout();
             this.Grb_TemPai.SuspendLayout();
             this.Grb_Endereco.SuspendLayout();
             this.Grb_Outros.SuspendLayout();
@@ -73,7 +76,7 @@
             // Lbl_CPF
             // 
             this.Lbl_CPF.AutoSize = true;
-            this.Lbl_CPF.Location = new System.Drawing.Point(546, 134);
+            this.Lbl_CPF.Location = new System.Drawing.Point(7, 134);
             this.Lbl_CPF.Name = "Lbl_CPF";
             this.Lbl_CPF.Size = new System.Drawing.Size(35, 13);
             this.Lbl_CPF.TabIndex = 0;
@@ -83,9 +86,9 @@
             // 
             this.Txt_CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_CPF.Location = new System.Drawing.Point(549, 150);
+            this.Txt_CPF.Location = new System.Drawing.Point(6, 150);
             this.Txt_CPF.Name = "Txt_CPF";
-            this.Txt_CPF.Size = new System.Drawing.Size(282, 20);
+            this.Txt_CPF.Size = new System.Drawing.Size(329, 20);
             this.Txt_CPF.TabIndex = 6;
             // 
             // Txt_NomeCliente
@@ -110,7 +113,7 @@
             // 
             this.Txt_NomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_NomeMae.Location = new System.Drawing.Point(6, 111);
+            this.Txt_NomeMae.Location = new System.Drawing.Point(7, 72);
             this.Txt_NomeMae.Name = "Txt_NomeMae";
             this.Txt_NomeMae.Size = new System.Drawing.Size(537, 20);
             this.Txt_NomeMae.TabIndex = 4;
@@ -118,7 +121,7 @@
             // Lbl_NomeMae
             // 
             this.Lbl_NomeMae.AutoSize = true;
-            this.Lbl_NomeMae.Location = new System.Drawing.Point(6, 95);
+            this.Lbl_NomeMae.Location = new System.Drawing.Point(7, 56);
             this.Lbl_NomeMae.Name = "Lbl_NomeMae";
             this.Lbl_NomeMae.Size = new System.Drawing.Size(35, 13);
             this.Lbl_NomeMae.TabIndex = 6;
@@ -128,7 +131,7 @@
             // 
             this.Txt_NomePai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_NomePai.Location = new System.Drawing.Point(6, 72);
+            this.Txt_NomePai.Location = new System.Drawing.Point(6, 111);
             this.Txt_NomePai.Name = "Txt_NomePai";
             this.Txt_NomePai.Size = new System.Drawing.Size(537, 20);
             this.Txt_NomePai.TabIndex = 3;
@@ -136,7 +139,7 @@
             // Lbl_NomePai
             // 
             this.Lbl_NomePai.AutoSize = true;
-            this.Lbl_NomePai.Location = new System.Drawing.Point(6, 56);
+            this.Lbl_NomePai.Location = new System.Drawing.Point(6, 95);
             this.Lbl_NomePai.Name = "Lbl_NomePai";
             this.Lbl_NomePai.Size = new System.Drawing.Size(35, 13);
             this.Lbl_NomePai.TabIndex = 4;
@@ -192,22 +195,6 @@
             this.Lbl_CEP.TabIndex = 10;
             this.Lbl_CEP.Text = "label1";
             // 
-            // Txt_Genero
-            // 
-            this.Txt_Genero.Location = new System.Drawing.Point(6, 150);
-            this.Txt_Genero.Name = "Txt_Genero";
-            this.Txt_Genero.Size = new System.Drawing.Size(537, 20);
-            this.Txt_Genero.TabIndex = 5;
-            // 
-            // Lbl_Genero
-            // 
-            this.Lbl_Genero.AutoSize = true;
-            this.Lbl_Genero.Location = new System.Drawing.Point(6, 134);
-            this.Lbl_Genero.Name = "Lbl_Genero";
-            this.Lbl_Genero.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_Genero.TabIndex = 8;
-            this.Lbl_Genero.Text = "label1";
-            // 
             // Txt_Bairro
             // 
             this.Txt_Bairro.Location = new System.Drawing.Point(412, 74);
@@ -224,19 +211,10 @@
             this.Lbl_Bairro.TabIndex = 16;
             this.Lbl_Bairro.Text = "label1";
             // 
-            // Txt_Estado
-            // 
-            this.Txt_Estado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_Estado.Location = new System.Drawing.Point(543, 113);
-            this.Txt_Estado.Name = "Txt_Estado";
-            this.Txt_Estado.Size = new System.Drawing.Size(287, 20);
-            this.Txt_Estado.TabIndex = 12;
-            // 
             // Lbl_Estado
             // 
             this.Lbl_Estado.AutoSize = true;
-            this.Lbl_Estado.Location = new System.Drawing.Point(540, 97);
+            this.Lbl_Estado.Location = new System.Drawing.Point(514, 97);
             this.Lbl_Estado.Name = "Lbl_Estado";
             this.Lbl_Estado.Size = new System.Drawing.Size(35, 13);
             this.Lbl_Estado.TabIndex = 18;
@@ -311,12 +289,12 @@
             this.Grb_Codigo.Size = new System.Drawing.Size(292, 64);
             this.Grb_Codigo.TabIndex = 28;
             this.Grb_Codigo.TabStop = false;
-            this.Grb_Codigo.Text = "groupBox1";
             // 
             // Grb_DadosPessoais
             // 
             this.Grb_DadosPessoais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grb_DadosPessoais.Controls.Add(this.Grb_Genero);
             this.Grb_DadosPessoais.Controls.Add(this.Grb_TemPai);
             this.Grb_DadosPessoais.Controls.Add(this.Txt_NomeCliente);
             this.Grb_DadosPessoais.Controls.Add(this.Lbl_NomeCliente);
@@ -324,8 +302,6 @@
             this.Grb_DadosPessoais.Controls.Add(this.Txt_NomePai);
             this.Grb_DadosPessoais.Controls.Add(this.Lbl_NomeMae);
             this.Grb_DadosPessoais.Controls.Add(this.Txt_NomeMae);
-            this.Grb_DadosPessoais.Controls.Add(this.Lbl_Genero);
-            this.Grb_DadosPessoais.Controls.Add(this.Txt_Genero);
             this.Grb_DadosPessoais.Controls.Add(this.Lbl_CPF);
             this.Grb_DadosPessoais.Controls.Add(this.Txt_CPF);
             this.Grb_DadosPessoais.Location = new System.Drawing.Point(14, 75);
@@ -333,23 +309,66 @@
             this.Grb_DadosPessoais.Size = new System.Drawing.Size(837, 182);
             this.Grb_DadosPessoais.TabIndex = 29;
             this.Grb_DadosPessoais.TabStop = false;
-            this.Grb_DadosPessoais.Text = "groupBox1";
+            // 
+            // Grb_Genero
+            // 
+            this.Grb_Genero.Controls.Add(this.Rb_Outro);
+            this.Grb_Genero.Controls.Add(this.Rb_Feminino);
+            this.Grb_Genero.Controls.Add(this.Rb_Masculino);
+            this.Grb_Genero.Location = new System.Drawing.Point(344, 134);
+            this.Grb_Genero.Name = "Grb_Genero";
+            this.Grb_Genero.Size = new System.Drawing.Size(487, 41);
+            this.Grb_Genero.TabIndex = 10;
+            this.Grb_Genero.TabStop = false;
+            this.Grb_Genero.Text = "Gênero";
+            // 
+            // Rb_Outro
+            // 
+            this.Rb_Outro.AutoSize = true;
+            this.Rb_Outro.Location = new System.Drawing.Point(188, 16);
+            this.Rb_Outro.Name = "Rb_Outro";
+            this.Rb_Outro.Size = new System.Drawing.Size(85, 17);
+            this.Rb_Outro.TabIndex = 2;
+            this.Rb_Outro.TabStop = true;
+            this.Rb_Outro.Text = "radioButton3";
+            this.Rb_Outro.UseVisualStyleBackColor = true;
+            // 
+            // Rb_Feminino
+            // 
+            this.Rb_Feminino.AutoSize = true;
+            this.Rb_Feminino.Location = new System.Drawing.Point(97, 16);
+            this.Rb_Feminino.Name = "Rb_Feminino";
+            this.Rb_Feminino.Size = new System.Drawing.Size(85, 17);
+            this.Rb_Feminino.TabIndex = 1;
+            this.Rb_Feminino.TabStop = true;
+            this.Rb_Feminino.Text = "radioButton2";
+            this.Rb_Feminino.UseVisualStyleBackColor = true;
+            // 
+            // Rb_Masculino
+            // 
+            this.Rb_Masculino.AutoSize = true;
+            this.Rb_Masculino.Location = new System.Drawing.Point(6, 16);
+            this.Rb_Masculino.Name = "Rb_Masculino";
+            this.Rb_Masculino.Size = new System.Drawing.Size(85, 17);
+            this.Rb_Masculino.TabIndex = 0;
+            this.Rb_Masculino.TabStop = true;
+            this.Rb_Masculino.Text = "radioButton1";
+            this.Rb_Masculino.UseVisualStyleBackColor = true;
             // 
             // Grb_TemPai
             // 
             this.Grb_TemPai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Grb_TemPai.Controls.Add(this.Chk_TemPai);
-            this.Grb_TemPai.Location = new System.Drawing.Point(562, 59);
+            this.Grb_TemPai.Location = new System.Drawing.Point(549, 111);
             this.Grb_TemPai.Name = "Grb_TemPai";
-            this.Grb_TemPai.Size = new System.Drawing.Size(228, 72);
+            this.Grb_TemPai.Size = new System.Drawing.Size(117, 20);
             this.Grb_TemPai.TabIndex = 9;
             this.Grb_TemPai.TabStop = false;
-            this.Grb_TemPai.Text = "groupBox1";
             // 
             // Chk_TemPai
             // 
             this.Chk_TemPai.AutoSize = true;
-            this.Chk_TemPai.Location = new System.Drawing.Point(7, 18);
+            this.Chk_TemPai.Location = new System.Drawing.Point(6, 2);
             this.Chk_TemPai.Name = "Chk_TemPai";
             this.Chk_TemPai.Size = new System.Drawing.Size(80, 17);
             this.Chk_TemPai.TabIndex = 0;
@@ -361,6 +380,7 @@
             // 
             this.Grb_Endereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grb_Endereco.Controls.Add(this.Cb_Estados);
             this.Grb_Endereco.Controls.Add(this.Lbl_Cidade);
             this.Grb_Endereco.Controls.Add(this.Txb_Cidade);
             this.Grb_Endereco.Controls.Add(this.Lbl_CEP);
@@ -372,13 +392,74 @@
             this.Grb_Endereco.Controls.Add(this.Lbl_Bairro);
             this.Grb_Endereco.Controls.Add(this.Txt_Bairro);
             this.Grb_Endereco.Controls.Add(this.Lbl_Estado);
-            this.Grb_Endereco.Controls.Add(this.Txt_Estado);
             this.Grb_Endereco.Location = new System.Drawing.Point(15, 256);
             this.Grb_Endereco.Name = "Grb_Endereco";
             this.Grb_Endereco.Size = new System.Drawing.Size(836, 140);
             this.Grb_Endereco.TabIndex = 30;
             this.Grb_Endereco.TabStop = false;
-            this.Grb_Endereco.Text = "groupBox1";
+            // 
+            // Cb_Estados
+            // 
+            this.Cb_Estados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Cb_Estados.FormattingEnabled = true;
+            this.Cb_Estados.Items.AddRange(new object[] {
+            "Acre (AC)",
+            "",
+            "Alagoas (AL)",
+            "",
+            "Amapá (AP)",
+            "",
+            "Amazonas (AM)",
+            "",
+            "Bahia (BA)",
+            "",
+            "Ceará (CE)",
+            "",
+            "Distrito Federal (DF)",
+            "",
+            "Espírito Santo (ES)",
+            "",
+            "Goiás (GO)",
+            "",
+            "Maranhão (MA)",
+            "",
+            "Mato Grosso (MT)",
+            "",
+            "Mato Grosso do Sul (MS)",
+            "",
+            "Minas Gerais (MG)",
+            "",
+            "Pará (PA)",
+            "",
+            "Paraíba (PB)",
+            "",
+            "Paraná (PR)",
+            "",
+            "Pernambuco (PE)",
+            "",
+            "Piauí (PI)",
+            "",
+            "Rio de Janeiro (RJ)",
+            "",
+            "Rio Grande do Norte (RN)",
+            "",
+            "Rio Grande do Sul (RS)",
+            "",
+            "Rondônia (RO)",
+            "",
+            "Roraima (RR)",
+            "",
+            "Santa Catarina (SC)",
+            "",
+            "São Paulo (SP)",
+            "",
+            "Sergipe (SE)",
+            "",
+            "Tocantins (TO)"});
+            this.Cb_Estados.Location = new System.Drawing.Point(517, 113);
+            this.Cb_Estados.Name = "Cb_Estados";
+            this.Cb_Estados.Size = new System.Drawing.Size(313, 21);
+            this.Cb_Estados.TabIndex = 21;
             // 
             // Lbl_Cidade
             // 
@@ -391,11 +472,9 @@
             // 
             // Txb_Cidade
             // 
-            this.Txb_Cidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txb_Cidade.Location = new System.Drawing.Point(9, 113);
             this.Txb_Cidade.Name = "Txb_Cidade";
-            this.Txb_Cidade.Size = new System.Drawing.Size(528, 20);
+            this.Txb_Cidade.Size = new System.Drawing.Size(502, 20);
             this.Txb_Cidade.TabIndex = 11;
             // 
             // Grb_Outros
@@ -430,6 +509,8 @@
             this.Grb_Codigo.PerformLayout();
             this.Grb_DadosPessoais.ResumeLayout(false);
             this.Grb_DadosPessoais.PerformLayout();
+            this.Grb_Genero.ResumeLayout(false);
+            this.Grb_Genero.PerformLayout();
             this.Grb_TemPai.ResumeLayout(false);
             this.Grb_TemPai.PerformLayout();
             this.Grb_Endereco.ResumeLayout(false);
@@ -456,11 +537,8 @@
         private System.Windows.Forms.Label Lbl_Logradouro;
         private System.Windows.Forms.TextBox Txt_CEP;
         private System.Windows.Forms.Label Lbl_CEP;
-        private System.Windows.Forms.TextBox Txt_Genero;
-        private System.Windows.Forms.Label Lbl_Genero;
         private System.Windows.Forms.TextBox Txt_Bairro;
         private System.Windows.Forms.Label Lbl_Bairro;
-        private System.Windows.Forms.TextBox Txt_Estado;
         private System.Windows.Forms.Label Lbl_Estado;
         private System.Windows.Forms.TextBox Txt_RendaFamiliar;
         private System.Windows.Forms.Label Lbl_RendaFamiliar;
@@ -477,5 +555,10 @@
         private System.Windows.Forms.TextBox Txb_Cidade;
         private System.Windows.Forms.GroupBox Grb_TemPai;
         private System.Windows.Forms.CheckBox Chk_TemPai;
+        private System.Windows.Forms.GroupBox Grb_Genero;
+        private System.Windows.Forms.RadioButton Rb_Outro;
+        private System.Windows.Forms.RadioButton Rb_Feminino;
+        private System.Windows.Forms.RadioButton Rb_Masculino;
+        private System.Windows.Forms.ComboBox Cb_Estados;
     }
 }
