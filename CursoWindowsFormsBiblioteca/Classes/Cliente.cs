@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
-    internal class Cliente
+    public class Cliente
     {
         public class Unit
         {
