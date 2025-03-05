@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CursoWindowsFormsBiblioteca.Classes;
 
 namespace CursoWindowsForms
 {
@@ -51,6 +52,31 @@ namespace CursoWindowsForms
             }
         }
 
-        
+        private void novoToolStripButton_Click(object sender, EventArgs e)
+        {
+            Cliente.Unit Cliente = new Cliente.Unit();
+            Cliente.Id = "111111";
+            Cliente.ValidaClasse();
+        }
+
+        private void abrirToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("CANSA NAO IDIOTA??W");
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("AI TOMA");
+        }
+
+        private void Apaga_toolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PAM PAM PAM PAM, PAM");
+        }
+
+        private void Limpar_toolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("ALURANTE");
+        }
     }
 }

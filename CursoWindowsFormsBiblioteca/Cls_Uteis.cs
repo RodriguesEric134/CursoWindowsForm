@@ -11,7 +11,7 @@ namespace CursoWindowsFormsBiblioteca
     {
         public static bool validaSenhaLogin(string senha)
         {
-            if (senha == "curso")
+            if (senha == "curso" | senha == "CURSO")
             {
                 return true;
             }
