@@ -57,17 +57,17 @@
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Grb_Codigo = new System.Windows.Forms.GroupBox();
             this.Grb_DadosPessoais = new System.Windows.Forms.GroupBox();
-            this.Grb_Endereco = new System.Windows.Forms.GroupBox();
-            this.Grb_Outros = new System.Windows.Forms.GroupBox();
-            this.Lbl_Cidade = new System.Windows.Forms.Label();
-            this.Txb_Cidade = new System.Windows.Forms.TextBox();
             this.Grb_TemPai = new System.Windows.Forms.GroupBox();
             this.Chk_TemPai = new System.Windows.Forms.CheckBox();
+            this.Grb_Endereco = new System.Windows.Forms.GroupBox();
+            this.Lbl_Cidade = new System.Windows.Forms.Label();
+            this.Txb_Cidade = new System.Windows.Forms.TextBox();
+            this.Grb_Outros = new System.Windows.Forms.GroupBox();
             this.Grb_Codigo.SuspendLayout();
             this.Grb_DadosPessoais.SuspendLayout();
+            this.Grb_TemPai.SuspendLayout();
             this.Grb_Endereco.SuspendLayout();
             this.Grb_Outros.SuspendLayout();
-            this.Grb_TemPai.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_CPF
@@ -335,6 +335,28 @@
             this.Grb_DadosPessoais.TabStop = false;
             this.Grb_DadosPessoais.Text = "groupBox1";
             // 
+            // Grb_TemPai
+            // 
+            this.Grb_TemPai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grb_TemPai.Controls.Add(this.Chk_TemPai);
+            this.Grb_TemPai.Location = new System.Drawing.Point(562, 59);
+            this.Grb_TemPai.Name = "Grb_TemPai";
+            this.Grb_TemPai.Size = new System.Drawing.Size(228, 72);
+            this.Grb_TemPai.TabIndex = 9;
+            this.Grb_TemPai.TabStop = false;
+            this.Grb_TemPai.Text = "groupBox1";
+            // 
+            // Chk_TemPai
+            // 
+            this.Chk_TemPai.AutoSize = true;
+            this.Chk_TemPai.Location = new System.Drawing.Point(7, 18);
+            this.Chk_TemPai.Name = "Chk_TemPai";
+            this.Chk_TemPai.Size = new System.Drawing.Size(80, 17);
+            this.Chk_TemPai.TabIndex = 0;
+            this.Chk_TemPai.Text = "checkBox1";
+            this.Chk_TemPai.UseVisualStyleBackColor = true;
+            this.Chk_TemPai.CheckedChanged += new System.EventHandler(this.Chk_TemPai_CheckedChanged);
+            // 
             // Grb_Endereco
             // 
             this.Grb_Endereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -358,23 +380,6 @@
             this.Grb_Endereco.TabStop = false;
             this.Grb_Endereco.Text = "groupBox1";
             // 
-            // Grb_Outros
-            // 
-            this.Grb_Outros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Grb_Outros.Controls.Add(this.Lbl_Telefone);
-            this.Grb_Outros.Controls.Add(this.Txt_Telefone);
-            this.Grb_Outros.Controls.Add(this.Lbl_RendaFamiliar);
-            this.Grb_Outros.Controls.Add(this.Txt_RendaFamiliar);
-            this.Grb_Outros.Controls.Add(this.Txt_Profissao);
-            this.Grb_Outros.Controls.Add(this.Lbl_Profissao);
-            this.Grb_Outros.Location = new System.Drawing.Point(15, 402);
-            this.Grb_Outros.Name = "Grb_Outros";
-            this.Grb_Outros.Size = new System.Drawing.Size(830, 135);
-            this.Grb_Outros.TabIndex = 31;
-            this.Grb_Outros.TabStop = false;
-            this.Grb_Outros.Text = "groupBox2";
-            // 
             // Lbl_Cidade
             // 
             this.Lbl_Cidade.AutoSize = true;
@@ -393,26 +398,22 @@
             this.Txb_Cidade.Size = new System.Drawing.Size(528, 20);
             this.Txb_Cidade.TabIndex = 11;
             // 
-            // Grb_TemPai
+            // Grb_Outros
             // 
-            this.Grb_TemPai.Controls.Add(this.Chk_TemPai);
-            this.Grb_TemPai.Location = new System.Drawing.Point(562, 59);
-            this.Grb_TemPai.Name = "Grb_TemPai";
-            this.Grb_TemPai.Size = new System.Drawing.Size(228, 72);
-            this.Grb_TemPai.TabIndex = 9;
-            this.Grb_TemPai.TabStop = false;
-            this.Grb_TemPai.Text = "groupBox1";
-            // 
-            // Chk_TemPai
-            // 
-            this.Chk_TemPai.AutoSize = true;
-            this.Chk_TemPai.Location = new System.Drawing.Point(7, 18);
-            this.Chk_TemPai.Name = "Chk_TemPai";
-            this.Chk_TemPai.Size = new System.Drawing.Size(80, 17);
-            this.Chk_TemPai.TabIndex = 0;
-            this.Chk_TemPai.Text = "checkBox1";
-            this.Chk_TemPai.UseVisualStyleBackColor = true;
-            this.Chk_TemPai.CheckedChanged += new System.EventHandler(this.Chk_TemPai_CheckedChanged);
+            this.Grb_Outros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grb_Outros.Controls.Add(this.Lbl_Telefone);
+            this.Grb_Outros.Controls.Add(this.Txt_Telefone);
+            this.Grb_Outros.Controls.Add(this.Lbl_RendaFamiliar);
+            this.Grb_Outros.Controls.Add(this.Txt_RendaFamiliar);
+            this.Grb_Outros.Controls.Add(this.Txt_Profissao);
+            this.Grb_Outros.Controls.Add(this.Lbl_Profissao);
+            this.Grb_Outros.Location = new System.Drawing.Point(15, 402);
+            this.Grb_Outros.Name = "Grb_Outros";
+            this.Grb_Outros.Size = new System.Drawing.Size(830, 135);
+            this.Grb_Outros.TabIndex = 31;
+            this.Grb_Outros.TabStop = false;
+            this.Grb_Outros.Text = "groupBox2";
             // 
             // Frm_CadastroCliente_UC
             // 
@@ -429,12 +430,12 @@
             this.Grb_Codigo.PerformLayout();
             this.Grb_DadosPessoais.ResumeLayout(false);
             this.Grb_DadosPessoais.PerformLayout();
+            this.Grb_TemPai.ResumeLayout(false);
+            this.Grb_TemPai.PerformLayout();
             this.Grb_Endereco.ResumeLayout(false);
             this.Grb_Endereco.PerformLayout();
             this.Grb_Outros.ResumeLayout(false);
             this.Grb_Outros.PerformLayout();
-            this.Grb_TemPai.ResumeLayout(false);
-            this.Grb_TemPai.PerformLayout();
             this.ResumeLayout(false);
 
         }

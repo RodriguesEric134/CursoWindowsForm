@@ -176,6 +176,8 @@ namespace CursoWindowsForms
                     cadastrosToolStripMenuItem.Enabled = true;
 
                     MessageBox.Show($"Bem vindo, {usuario} !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Lbl_ExibeUsuario.Text = $"Usuário: {usuario}";
+                    Lbl_ExibeUsuario.Visible = true;
                 }
                 else
                 {
@@ -200,6 +202,8 @@ namespace CursoWindowsForms
                     ApagaAba(Tbc_Aplicacoes.TabPages[i]);
                 }
 
+                
+                Lbl_ExibeUsuario.Visible = false;
 
                 novoToolStripMenuItem.Enabled = false;
                 apagarAbaToolStripMenuItem.Enabled = false;
@@ -331,6 +335,11 @@ namespace CursoWindowsForms
 
             }
             Tbc_Aplicacoes.TabPages.Remove(TB);
+        }
+
+        private void Lbl_ExibeUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

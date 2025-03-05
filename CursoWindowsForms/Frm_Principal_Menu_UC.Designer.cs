@@ -51,6 +51,7 @@
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tbc_Aplicacoes = new System.Windows.Forms.TabControl();
             this.Iml_Imagens = new System.Windows.Forms.ImageList(this.components);
+            this.Lbl_ExibeUsuario = new System.Windows.Forms.Label();
             this.Mnu_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,14 +190,14 @@
             this.clientesToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.Cadastros;
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.user;
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
@@ -245,11 +246,26 @@
             this.Iml_Imagens.Images.SetKeyName(6, "3643772-archive-archives-document-folder-open_113445.png");
             this.Iml_Imagens.Images.SetKeyName(7, "user.png");
             // 
+            // Lbl_ExibeUsuario
+            // 
+            this.Lbl_ExibeUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lbl_ExibeUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_ExibeUsuario.Location = new System.Drawing.Point(650, 5);
+            this.Lbl_ExibeUsuario.Name = "Lbl_ExibeUsuario";
+            this.Lbl_ExibeUsuario.Size = new System.Drawing.Size(174, 16);
+            this.Lbl_ExibeUsuario.TabIndex = 2;
+            this.Lbl_ExibeUsuario.Text = "Usuário: ";
+            this.Lbl_ExibeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Lbl_ExibeUsuario.Visible = false;
+            this.Lbl_ExibeUsuario.Click += new System.EventHandler(this.Lbl_ExibeUsuario_Click);
+            // 
             // Frm_Principal_Menu_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(836, 594);
+            this.Controls.Add(this.Lbl_ExibeUsuario);
             this.Controls.Add(this.Tbc_Aplicacoes);
             this.Controls.Add(this.Mnu_Principal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -287,5 +303,6 @@
         private System.Windows.Forms.ToolStripMenuItem byteBankToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.Label Lbl_ExibeUsuario;
     }
 }
