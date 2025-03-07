@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualBasic;
 
 namespace CursoWindowsForms
 {
@@ -87,6 +88,70 @@ namespace CursoWindowsForms
         private void Limpar_toolStripButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("ALURANTE");
+        }
+
+        Cliente.Unit LeituraFormulario()
+        {
+            Cliente.Unit C = new Cliente.Unit();
+            C.Id = Txt_Codigo.Text;
+            C.Nome = Txt_NomeCliente.Text;
+            C.NomeMae = Txt_NomeMae.Text;
+            C.NomePai = Txt_NomePai.Text;
+            if (Chk_TemPai.Checked)
+            {
+                C.TemPai = true;
+            }
+            else
+            {
+                C.TemPai = false;
+            }
+            if(Rb_Masculino.Checked)
+            {
+                C.Genero = 0;
+            }
+            if (Rb_Feminino.Checked)
+            {
+                C.Genero = 1;
+            }
+            if (Rb_Outro.Checked)
+            {
+                C.Genero = 2;
+            }
+            C.CPF = Txt_CPF.Text;
+
+            C.CEP = Txt_CEP.Text;
+            C.Logradouro = Txt_Logradouro.Text;
+            C.Complemento = Txt_Complemento.Text;
+            C.Cidade = Txt_Cidade.Text;
+            C.Bairro = Txt_Bairro.Text;
+
+            if (Cb_Estados.SelectedIndex < 0)
+            {
+                C.Estado = "";
+            }
+            else
+            {
+                C.Estado = Cb_Estados.Items[Cb_Estados.SelectedIndex].ToString();
+            }
+            C.Telefone = Txt_Telefone.Text;
+            C.Profissao = Txt_Profissao.Text;
+
+            if (Information.IsNumeric (Txt_RendaFamiliar.Text))
+            {
+                Double vRenda = Convert.ToDouble(Txt_RendaFamiliar.Text);
+                if (vRenda < 0) 
+                {
+                    C.RendaFamiliar = 0;
+                }
+                else
+                {
+                    C.RendaFamiliar = vRenda;
+                }
+            }
+            
+            
+
+            return C;
         }
     }
 }

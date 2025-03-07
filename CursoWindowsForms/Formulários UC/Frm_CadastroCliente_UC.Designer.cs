@@ -64,7 +64,7 @@
             this.Grb_Endereco = new System.Windows.Forms.GroupBox();
             this.Cb_Estados = new System.Windows.Forms.ComboBox();
             this.Lbl_Cidade = new System.Windows.Forms.Label();
-            this.Txb_Cidade = new System.Windows.Forms.TextBox();
+            this.Txt_Cidade = new System.Windows.Forms.TextBox();
             this.Grb_Outros = new System.Windows.Forms.GroupBox();
             this.Tsp_Principal = new System.Windows.Forms.ToolStrip();
             this.novoToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -390,7 +390,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Grb_Endereco.Controls.Add(this.Cb_Estados);
             this.Grb_Endereco.Controls.Add(this.Lbl_Cidade);
-            this.Grb_Endereco.Controls.Add(this.Txb_Cidade);
+            this.Grb_Endereco.Controls.Add(this.Txt_Cidade);
             this.Grb_Endereco.Controls.Add(this.Lbl_CEP);
             this.Grb_Endereco.Controls.Add(this.Txt_CEP);
             this.Grb_Endereco.Controls.Add(this.Lbl_Logradouro);
@@ -479,14 +479,14 @@
             this.Lbl_Cidade.TabIndex = 20;
             this.Lbl_Cidade.Text = "label1";
             // 
-            // Txb_Cidade
+            // Txt_Cidade
             // 
-            this.Txb_Cidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Txt_Cidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txb_Cidade.Location = new System.Drawing.Point(9, 113);
-            this.Txb_Cidade.Name = "Txb_Cidade";
-            this.Txb_Cidade.Size = new System.Drawing.Size(502, 20);
-            this.Txb_Cidade.TabIndex = 11;
+            this.Txt_Cidade.Location = new System.Drawing.Point(9, 113);
+            this.Txt_Cidade.Name = "Txt_Cidade";
+            this.Txt_Cidade.Size = new System.Drawing.Size(502, 20);
+            this.Txt_Cidade.TabIndex = 11;
             // 
             // Grb_Outros
             // 
@@ -635,7 +635,7 @@
         private System.Windows.Forms.GroupBox Grb_Endereco;
         private System.Windows.Forms.GroupBox Grb_Outros;
         private System.Windows.Forms.Label Lbl_Cidade;
-        private System.Windows.Forms.TextBox Txb_Cidade;
+        private System.Windows.Forms.TextBox Txt_Cidade;
         private System.Windows.Forms.GroupBox Grb_TemPai;
         private System.Windows.Forms.CheckBox Chk_TemPai;
         private System.Windows.Forms.GroupBox Grb_Genero;
