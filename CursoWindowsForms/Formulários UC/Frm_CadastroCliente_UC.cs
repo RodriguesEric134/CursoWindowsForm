@@ -58,9 +58,10 @@ namespace CursoWindowsForms
         {
             try
             {
-                Cliente.Unit Cliente = new Cliente.Unit();
-                Cliente.Id = Txt_Codigo.Text;
-                Cliente.ValidaClasse();
+                Cliente.Unit C = new Cliente.Unit();
+                C = LeituraFormulario();
+                C.Id = Txt_Codigo.Text;
+                C.ValidaClasse();
                 MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
@@ -99,11 +100,11 @@ namespace CursoWindowsForms
             C.NomePai = Txt_NomePai.Text;
             if (Chk_TemPai.Checked)
             {
-                C.TemPai = true;
+               // C.TemPai = true;
             }
             else
             {
-                C.TemPai = false;
+               // C.TemPai = false;
             }
             if(Rb_Masculino.Checked)
             {
@@ -117,9 +118,9 @@ namespace CursoWindowsForms
             {
                 C.Genero = 2;
             }
-            C.CPF = Txt_CPF.Text;
+           // C.CPF = Txt_CPF.Text;
 
-            C.CEP = Txt_CEP.Text;
+          //  C.CEP = Txt_CEP.Text;
             C.Logradouro = Txt_Logradouro.Text;
             C.Complemento = Txt_Complemento.Text;
             C.Cidade = Txt_Cidade.Text;
