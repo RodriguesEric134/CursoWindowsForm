@@ -11,6 +11,7 @@ using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
 using CursoWindowsFormsBiblioteca;
+using CursoWindowsFormsBiblioteca.Classes.Databases;
 
 namespace CursoWindowsForms
 {
@@ -43,6 +44,26 @@ namespace CursoWindowsForms
             Rb_Outro.Text = "Outro";
         }
 
+
+        private void LimparFormulario()
+        {
+            Txt_Codigo.Text = "";
+            Txt_Bairro.Text = "";
+            Txt_CEP.Text = "";
+            Txt_Complemento.Text = "";
+            Txt_CPF.Text = "";
+            Cb_Estados.SelectedIndex = -1;
+            Chk_TemPai.Checked = false;
+            Rb_Masculino.Checked = false; Rb_Feminino.Checked = false; Rb_Outro.Checked = false;
+            Txt_Logradouro.Text = null;
+            Txt_NomeCliente.Text = "";
+            Txt_NomeMae.Text = "";
+            Txt_NomePai.Text = "";
+            Txt_Profissao.Text = "";
+            Txt_RendaFamiliar.Text = null;
+            Txt_Telefone.Text = null;           
+        }
+
         private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
         {
             if (Chk_TemPai.Checked)
@@ -64,7 +85,25 @@ namespace CursoWindowsForms
                 C.Id = Txt_Codigo.Text;
                 C.ValidaClasse();
                 C.ValidaComplemento();
-                MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string clienteJson = Cliente.SerializedClassUnit(C);               
+
+                Db_Fichario F = new Db_Fichario("C:\\Users\\conap\\OneDrive\\Documentos\\Estudo-Eric\\CursoWindowsForms\\CursoWindowsForm2\\Fichario");
+                if (F.status)
+                {
+                    F.incluir(C.Id, clienteJson);
+                    if (F.status)
+                    {
+                        MessageBox.Show("OK: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (ValidationException Ex)
             {
@@ -94,7 +133,7 @@ namespace CursoWindowsForms
 
         private void Limpar_toolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ALURANTE");
+            LimparFormulario();
         }
 
         Cliente.Unit LeituraFormulario()
