@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.VisualBasic;
+using CursoWindowsFormsBiblioteca;
 
 namespace CursoWindowsForms
 {
@@ -62,13 +63,18 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.Id = Txt_Codigo.Text;
                 C.ValidaClasse();
+                C.ValidaComplemento();
                 MessageBox.Show("Classe foi inicializada sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
             {
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
@@ -118,9 +124,9 @@ namespace CursoWindowsForms
             {
                 C.Genero = 2;
             }
-           // C.CPF = Txt_CPF.Text;
+            C.Cpf = Txt_CPF.Text;
 
-          //  C.CEP = Txt_CEP.Text;
+            C.Cep = Txt_CEP.Text;
             C.Logradouro = Txt_Logradouro.Text;
             C.Complemento = Txt_Complemento.Text;
             C.Cidade = Txt_Cidade.Text;
@@ -153,6 +159,36 @@ namespace CursoWindowsForms
             
 
             return C;
+        }
+
+        private void Txt_CEP_Leave(object sender, EventArgs e)
+        {
+            string vCep = Txt_CEP.Text;
+            if (vCep != "")
+            {
+                if (vCep.Length == 8)
+                {
+                    if (Information.IsNumeric(vCep))
+                    {
+                        var vJson = Cls_Uteis.GeraJSONCEP(vCep);
+                        Cep.Unit CEP = new Cep.Unit();
+                        CEP = Cep.DesSerializedClassUnit(vJson);
+                        Txt_Logradouro.Text = CEP.Logradouro;
+                        Txt_Bairro.Text = CEP.Bairro;
+                        Txt_Cidade.Text = CEP.Localidade;
+
+                        Cb_Estados.SelectedIndex = -1;
+                        for (int i =0; i <= Cb_Estados.Items.Count -1; i++)
+                        {
+                            var vPos = Strings.InStr(Cb_Estados.Items[i].ToString(), $"({CEP.Uf})");
+                            if (vPos > 0)
+                            {
+                                Cb_Estados.SelectedIndex = i;
+                            }
+                        }
+                    }
+                }
+            }            
         }
     }
 }
