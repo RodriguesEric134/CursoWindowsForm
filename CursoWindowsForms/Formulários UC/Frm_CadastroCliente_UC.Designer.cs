@@ -72,6 +72,7 @@
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.Apaga_toolStripButton = new System.Windows.Forms.ToolStripButton();
             this.Limpar_toolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.Btn_Busca = new System.Windows.Forms.Button();
             this.Grb_Codigo.SuspendLayout();
             this.Grb_DadosPessoais.SuspendLayout();
             this.Grb_Genero.SuspendLayout();
@@ -285,17 +286,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Codigo.Location = new System.Drawing.Point(6, 19);
             this.Txt_Codigo.Name = "Txt_Codigo";
-            this.Txt_Codigo.Size = new System.Drawing.Size(286, 20);
+            this.Txt_Codigo.Size = new System.Drawing.Size(298, 20);
             this.Txt_Codigo.TabIndex = 1;
             // 
             // Grb_Codigo
             // 
             this.Grb_Codigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Grb_Codigo.Controls.Add(this.Btn_Busca);
             this.Grb_Codigo.Controls.Add(this.Txt_Codigo);
             this.Grb_Codigo.Location = new System.Drawing.Point(14, 60);
             this.Grb_Codigo.Name = "Grb_Codigo";
-            this.Grb_Codigo.Size = new System.Drawing.Size(292, 54);
+            this.Grb_Codigo.Size = new System.Drawing.Size(467, 54);
             this.Grb_Codigo.TabIndex = 28;
             this.Grb_Codigo.TabStop = false;
             // 
@@ -548,6 +550,16 @@
             this.Limpar_toolStripButton.ToolTipText = "Limpar dados";
             this.Limpar_toolStripButton.Click += new System.EventHandler(this.Limpar_toolStripButton_Click);
             // 
+            // Btn_Busca
+            // 
+            this.Btn_Busca.Location = new System.Drawing.Point(328, 19);
+            this.Btn_Busca.Name = "Btn_Busca";
+            this.Btn_Busca.Size = new System.Drawing.Size(103, 20);
+            this.Btn_Busca.TabIndex = 2;
+            this.Btn_Busca.Text = "Buscar";
+            this.Btn_Busca.UseVisualStyleBackColor = true;
+            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
+            // 
             // Frm_CadastroCliente_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,5 +636,6 @@
         private System.Windows.Forms.ToolStripButton salvarToolStripButton;
         private System.Windows.Forms.ToolStripButton Apaga_toolStripButton;
         private System.Windows.Forms.ToolStripButton Limpar_toolStripButton;
+        private System.Windows.Forms.Button Btn_Busca;
     }
 }

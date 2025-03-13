@@ -107,5 +107,53 @@ namespace CursoWindowsFormsBiblioteca.Classes.Databases
             }
         }
 
+        public void Alterar(string Id, string jsonUnit)
+        {
+            status = true;
+            try
+            {
+                if (!(File.Exists(diretorio + "\\" + Id + ".json")))
+                {
+                    status = false;
+                    mensagem = "Quer alterar o que? não tem ID!: ";
+                }
+                else
+                {
+                    File.Delete(diretorio + "\\" + Id + ".json");
+                    File.WriteAllText(diretorio + "\\" + Id + ".json", jsonUnit);
+                    mensagem = "Inclusão efetuada com sucesso: " + Id;
+                }
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = $"Conexão com Erro, {ex.Message}";
+            }
+
+        }
+
+        public List<string> BuscarTodos()
+        {
+            status = true;
+            List<string> list = new List<string>();
+            try
+            {
+
+                var Arquivos = Directory.GetFiles(diretorio, "*.json");
+                for (int i = 0; i < Arquivos.Length -1; i++)
+                {
+                    string conteudo = File.ReadAllText(Arquivos[i]);
+                    list.Add(conteudo);
+                }
+                return list;                
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = "Erro ao buscar o conteúdo do identificador: " + ex.Message;
+            }
+            return list;
+        }
+
     }
 }

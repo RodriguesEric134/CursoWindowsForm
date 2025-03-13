@@ -143,7 +143,48 @@ namespace CursoWindowsForms
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("AI TOMA");
+            if (Txt_Codigo.Text == "")
+            {
+                MessageBox.Show("Código do cliente vazio", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    Cliente.Unit C = new Cliente.Unit();
+                    C = LeituraFormulario();
+                    C.Id = Txt_Codigo.Text;
+                    C.ValidaClasse();
+                    C.ValidaComplemento();
+                    string clienteJson = Cliente.SerializedClassUnit(C);
+
+                    Db_Fichario F = new Db_Fichario("C:\\Users\\conap\\OneDrive\\Documentos\\Estudo-Eric\\CursoWindowsForms\\CursoWindowsForm2\\Fichario");
+                    if (F.status)
+                    {
+                        F.Alterar(C.Id, clienteJson);
+                        if (F.status)
+                        {
+                            MessageBox.Show("OK: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERR: " + F.mensagem, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (ValidationException Ex)
+                {
+                    MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void Apaga_toolStripButton_Click(object sender, EventArgs e)
@@ -345,6 +386,26 @@ namespace CursoWindowsForms
                     }
                 }
             }            
+        }
+
+        private void Btn_Busca_Click(object sender, EventArgs e)
+        {
+            Db_Fichario FBusca = new Db_Fichario("C:\\Users\\conap\\OneDrive\\Documentos\\Estudo-Eric\\CursoWindowsForms\\CursoWindowsForm2\\Fichario");
+            if (FBusca.status)
+            {
+                List<string> list = new List<string>();
+                list = FBusca.BuscarTodos();
+
+                Frm_Busca FForm = new Frm_Busca();
+                FForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Caminho do banco incorreto", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            
         }
     }
 }
