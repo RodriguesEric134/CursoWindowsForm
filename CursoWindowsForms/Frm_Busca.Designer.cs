@@ -30,44 +30,57 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Busca));
             this.Tsp_Principal = new System.Windows.Forms.ToolStrip();
-            this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.SalvarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.Lst_busca = new System.Windows.Forms.ListBox();
+            this.ExcluirToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.Tsp_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // Tsp_Principal
             // 
             this.Tsp_Principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvarToolStripButton});
+            this.SalvarToolStripButton,
+            this.ExcluirToolStripButton});
             this.Tsp_Principal.Location = new System.Drawing.Point(0, 0);
             this.Tsp_Principal.Name = "Tsp_Principal";
             this.Tsp_Principal.Size = new System.Drawing.Size(344, 25);
             this.Tsp_Principal.TabIndex = 33;
             this.Tsp_Principal.Text = "toolStrip1";
             // 
-            // salvarToolStripButton
+            // SalvarToolStripButton
             // 
-            this.salvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.salvarToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("salvarToolStripButton.Image")));
-            this.salvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.salvarToolStripButton.Name = "salvarToolStripButton";
-            this.salvarToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.salvarToolStripButton.Text = "&Salvar";
+            this.SalvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SalvarToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SalvarToolStripButton.Image")));
+            this.SalvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SalvarToolStripButton.Name = "SalvarToolStripButton";
+            this.SalvarToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.SalvarToolStripButton.Text = "&Salvar";
+            this.SalvarToolStripButton.Click += new System.EventHandler(this.SalvarToolStripButton_Click);
             // 
-            // listBox1
+            // Lst_busca
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(320, 277);
-            this.listBox1.TabIndex = 34;
+            this.Lst_busca.FormattingEnabled = true;
+            this.Lst_busca.Location = new System.Drawing.Point(12, 32);
+            this.Lst_busca.Name = "Lst_busca";
+            this.Lst_busca.Size = new System.Drawing.Size(320, 277);
+            this.Lst_busca.TabIndex = 34;
+            // 
+            // ExcluirToolStripButton
+            // 
+            this.ExcluirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ExcluirToolStripButton.Image = global::CursoWindowsForms.Properties.Resources.ExcluirBarra;
+            this.ExcluirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExcluirToolStripButton.Name = "ExcluirToolStripButton";
+            this.ExcluirToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.ExcluirToolStripButton.Text = "toolStripButton1";
+            this.ExcluirToolStripButton.Click += new System.EventHandler(this.ExcluirToolStripButton_Click);
             // 
             // Frm_Busca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 321);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.Lst_busca);
             this.Controls.Add(this.Tsp_Principal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -86,7 +99,8 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip Tsp_Principal;
-        private System.Windows.Forms.ToolStripButton salvarToolStripButton;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripButton SalvarToolStripButton;
+        private System.Windows.Forms.ListBox Lst_busca;
+        private System.Windows.Forms.ToolStripButton ExcluirToolStripButton;
     }
 }
